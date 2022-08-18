@@ -1,7 +1,4 @@
-# desafioVagas
- 
- 
- Endpoints:
+##Endpoints:
 	- cadastrar vagas de emprego (post) (/vagas)
 	- cadastrar pessoas (post) (/pessoas)
 	- registrar candidaturas (post) (/candidaturas)
@@ -9,14 +6,14 @@
 	
 
 
-Candidato:
+##Candidato:
 	Nome
 	id_candidato
 	localizacao_candidato
 	profissao
 	niveldeExperiencia
 
-vaga:
+##Vaga:
 
 	id_vaga
 	profissão
@@ -24,8 +21,8 @@ vaga:
 	score_min
 	localizacao_vaga
 
-candidatura:
+##Candidatura:
  	id_vaga
 	id_profissao
 
-distancia
+## Distancia
