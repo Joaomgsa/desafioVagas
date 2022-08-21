@@ -17,5 +17,8 @@ import lombok.NoArgsConstructor;
 @Entity(name="Vaga")
 
 public class vagaModel {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 
 }
