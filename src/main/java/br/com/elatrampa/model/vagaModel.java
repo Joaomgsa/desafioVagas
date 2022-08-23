@@ -31,5 +31,7 @@ public class vagaModel {
 	private String empresa;
 	
 	private String descricaoVaga;
+	
+	private String tituloVaga;
 
 }
