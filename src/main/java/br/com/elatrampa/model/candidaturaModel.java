@@ -19,7 +19,7 @@ public class candidaturaModel {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer candidaturaId;
 	
-	private Integer idCanditato;
+	private Integer candidatoId;
 	
-	private Integer idVaga;
+	private Integer vagaId;
 }
