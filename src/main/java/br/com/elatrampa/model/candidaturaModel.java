@@ -12,14 +12,14 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity(name="Vaga")
+@Entity(name="Candidatura")
 public class candidaturaModel {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer candidaturaId;
 	
-	private Integer idCandditato;
+	private Integer idCanditato;
 	
 	private Integer idVaga;
 }
