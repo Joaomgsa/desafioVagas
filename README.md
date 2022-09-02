@@ -26,3 +26,5 @@
 	id_profissao
 
 ## Distancia
+
+atualizando modelo de dados
