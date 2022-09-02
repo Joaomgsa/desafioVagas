@@ -1,9 +1,11 @@
 package br.com.elatrampa.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -12,14 +14,24 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity(name="Candidatura")
-public class candidaturaModel {
+@Entity(name="Vaga")
 
+public class VagasModel {
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer candidaturaId;
+	private Long vagaId;
 	
-	private Integer candidatoId;
+	private Integer experienciaVaga;
 	
-	private Integer vagaId;
+	private String localidadeVaga;
+	
+	private String profissao;
+	
+	private String empresa;
+	
+	private String descricaoVaga;
+	
+	private String tituloVaga;
+
 }

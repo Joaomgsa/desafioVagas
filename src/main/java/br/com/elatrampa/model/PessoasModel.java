@@ -1,5 +1,5 @@
 package br.com.elatrampa.model;
 
-public class LocalidadeModel {
+public class PessoasModel {
 
 }
