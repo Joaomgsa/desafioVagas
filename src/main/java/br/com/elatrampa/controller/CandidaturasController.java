@@ -1,5 +1,5 @@
 package br.com.elatrampa.controller;
 
-public class candidaturasCotroller {
+public class CandidaturasController {
 
 }
