@@ -22,16 +22,14 @@ public class VagasModel {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long vagaId;
 	
-	private Integer experienciaVaga;
-	
-	private String localidadeVaga;
-	
-	private String profissao;
-	
-	private String empresa;
+	private String tituloVaga;
 	
 	private String descricaoVaga;
+		
+	private String localizacaoVaga;
 	
-	private String tituloVaga;
+	private Integer experienciaVaga;	
+	
+	
 
 }
