@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity(name="Vaga")
+@Entity(name="Vagas")
 
 public class VagasModel {
 	
