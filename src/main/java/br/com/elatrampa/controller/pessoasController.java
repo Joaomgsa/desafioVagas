@@ -35,7 +35,7 @@ public class PessoasController {
 	}
 	
 	@DeleteMapping(path={"/{pessoaid}"})
-	public ResponseEntity<?> delete(@PathVariable("vagaid") long pessoaid){
+	public ResponseEntity<?> delete(@PathVariable("pessoaid") long pessoaid){
 		return repository.findById(pessoaid)
 				.map(record ->{
 					repository.deleteById(pessoaid);

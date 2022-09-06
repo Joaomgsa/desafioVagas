@@ -24,4 +24,7 @@ public class CandidaturasController {
 		return repository.findAll();
 	}
 	
+	
+	
+	
 }

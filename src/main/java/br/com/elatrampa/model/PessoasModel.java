@@ -16,7 +16,7 @@ public class PessoasModel {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long pessoaID;
+	private Long pessoaId;
 	
 	private String nomePessoa;
 	
