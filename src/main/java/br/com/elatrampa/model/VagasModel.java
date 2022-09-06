@@ -22,6 +22,8 @@ public class VagasModel {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long vagaId;
 	
+	private String empresa;
+	
 	private String tituloVaga;
 	
 	private String descricaoVaga;
