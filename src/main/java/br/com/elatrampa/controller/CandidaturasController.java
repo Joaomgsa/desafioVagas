@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.elatrampa.repository.CandidaturasRepository;
@@ -24,7 +25,8 @@ public class CandidaturasController {
 		return repository.findAll();
 	}
 	
-	
+	@GetMapping(value = {"/candidaturas/{vagaId}/ranking"})
+	Public String 
 	
 	
 }
