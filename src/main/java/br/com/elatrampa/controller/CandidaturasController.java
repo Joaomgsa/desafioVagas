@@ -25,8 +25,8 @@ public class CandidaturasController {
 		return repository.findAll();
 	}
 	
-	@GetMapping(value = {"/candidaturas/{vagaId}/ranking"})
-	Public String 
+	/*@GetMapping(value = {"/candidaturas/{vagaId}/ranking"})
+	Public String */
 	
 	
 }
