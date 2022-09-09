@@ -29,4 +29,7 @@ public class CandidaturasController {
 	Public String */
 	
 	
+	@PostMapping
+	
+	
 }
