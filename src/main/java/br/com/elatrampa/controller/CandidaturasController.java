@@ -25,11 +25,6 @@ public class CandidaturasController {
 		return repository.findAll();
 	}
 	
-	/*@GetMapping(value = {"/candidaturas/{vagaId}/ranking"})
-	Public String */
-	
-	
-	@PostMapping
 	
 	
 }
