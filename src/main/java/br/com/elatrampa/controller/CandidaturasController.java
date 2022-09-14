@@ -20,10 +20,14 @@ public class CandidaturasController {
 	}
 	
 	
+	
 	@GetMapping
 	public List<?> findAll() {
 		return repository.findAll();
 	}
+	
+	@PostMapping 
+	
 	
 	
 	
