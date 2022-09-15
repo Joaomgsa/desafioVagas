@@ -27,7 +27,9 @@ public class CandidaturasController {
 	}
 	
 	@PostMapping 
-	
+	public List<?> findAll() {
+		return repository.findAll();
+	}
 	
 	
 	
