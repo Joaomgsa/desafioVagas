@@ -31,6 +31,6 @@ public class CandidaturasController {
 		return repository.findAll();
 	}
 	
-	
+	// Só um comentário
 	
 }
