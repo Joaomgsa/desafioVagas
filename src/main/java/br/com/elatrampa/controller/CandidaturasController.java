@@ -26,11 +26,6 @@ public class CandidaturasController {
 		return repository.findAll();
 	}
 	
-	@PostMapping 
-	public List<?> findAll() {
-		return repository.findAll();
-	}
 	
-	// Só um comentário
 	
 }
