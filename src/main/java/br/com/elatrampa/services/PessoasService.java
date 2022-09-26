@@ -9,6 +9,7 @@ import br.com.elatrampa.converter.DozerConverter;
 import br.com.elatrampa.model.PessoasModel;
 import br.com.elatrampa.repository.PessoasRepository;
 import br.com.elatrampa.vo.PessoaVo;
+import br.com.elatrampa.exception.ResourceNotFoundException;
 
 @Service
 public class PessoasService {
@@ -31,10 +32,30 @@ public class PessoasService {
 		return DozerConverter.parseObject(entity, PessoaVo.class);
 	}
 	
-	public PessoaVo findById(Long pessoaId) {
+	public PessoaVo findById(Long pessoaId){
 		var entity = repository.findById(pessoaId)
 				.orElseThrow(() -> new ResourceNotFoundException("Pessoa Não Encontrada nesse ID"));
 		return DozerConverter.parseObject(entity, PessoaVo.class);
 	}
+	
+	public PessoaVo update(PessoaVo pessoa) {
+		var entity = repository.findById(pessoa.getKey())
+				.orElseThrow(() -> new ResourceNotFoundException("Pessoa Não Encontrada nesse ID"));
+		
+		entity.setNomePessoa(pessoa.getNomePessoa());
+		entity.setProfissaoPessoa(pessoa.getProfissaoPessoa());
+		entity.setLocalizacaoPessoa(pessoa.getLocalizacaoPessoa());
+		entity.setNivelExperienciaPessoa(pessoa.getNivelExperienciaPessoa());
+		
+		var vo = DozerConverter.parseObject(repository.save(entity), PessoaVo.class);
+		
+		return vo;
+		
+	}
 
+	public void delete(Long pessoaId) {
+		PessoasModel entity = repository.findById(pessoaId)
+				.orElseThrow(() -> new ResourceNotFoundException("Pessoa Não Encontrada nesse ID"));
+		repository.delete(entity);
+	}
 }

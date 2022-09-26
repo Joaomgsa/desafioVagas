@@ -12,20 +12,20 @@ import java.util.Objects;
 import org.dozer.Mapping;
 
 
-@JsonPropertyOrder({ "vaga_Id", "empresa", "tituloVaga", "descricaoVaga", "localizacaoVaga", "experienciaVaga" })
+@JsonPropertyOrder({ "vagaId", "empresa", "tituloVaga", "descricaoVaga", "localizacaoVaga", "experienciaVaga" })
 public class VagasVo extends RepresentationModel<VagasVo> implements Serializable{
 	
 		private static final long serialVersionUID = 1L;
 		
 		
-		@Mapping("vaga_id")
-		@JsonProperty("vaga_id")
+		@Mapping("vagaId")
+		@JsonProperty("vagaId")
 		private Long vagaKey;
 		private String empresa;
 		private String tituloVaga;
 		private String descricaoVaga;
 		private String localizacaoVaga;
-		private String experienciaVaga;
+		private Integer experienciaVaga;
 		
 		
 		public VagasVo() {
@@ -82,12 +82,12 @@ public class VagasVo extends RepresentationModel<VagasVo> implements Serializabl
 		}
 
 
-		public String getExperienciaVaga() {
+		public Integer getExperienciaVaga() {
 			return experienciaVaga;
 		}
 
 
-		public void setExperienciaVaga(String experienciaVaga) {
+		public void setExperienciaVaga(Integer experienciaVaga) {
 			this.experienciaVaga = experienciaVaga;
 		}
 

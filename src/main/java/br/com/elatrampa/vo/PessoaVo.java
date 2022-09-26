@@ -12,7 +12,7 @@ import org.springframework.hateoas.RepresentationModel;
 
 import org.dozer.Mapping;
 
-@JsonPropertyOrder({"pessoa_Id", "nomePessoa", "profissaoPessoa", "localizacaoPessoa", "nivelExperienciaPessoa"})
+@JsonPropertyOrder({"pessoaId", "nomePessoa", "profissaoPessoa", "localizacaoPessoa", "nivelExperienciaPessoa"})
 public class PessoaVo extends RepresentationModel<PessoaVo> implements Serializable {
 	
 	private static final long serialVersionUID =1L;

@@ -110,6 +110,8 @@ public class VagasModel implements Serializable {
 				&& Objects.equals(tituloVaga, other.tituloVaga) && Objects.equals(vagaId, other.vagaId);
 	}
 
+	
+
 
 
 }
