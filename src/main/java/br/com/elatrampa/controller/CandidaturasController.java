@@ -14,9 +14,11 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.domain.Sort.Direction;
 import org.springframework.hateoas.CollectionModel;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -26,6 +28,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.com.elatrampa.services.CandidaturasService;
 import br.com.elatrampa.vo.CandidaturasVo;
+import br.com.erudio.controller.BookController;
+import br.com.erudio.data.vo.v1.BookVO;
 
 
 
@@ -74,6 +78,22 @@ public class CandidaturasController {
 		CandidaturasVo candidaturasVo = service.create(candidatura);
 		candidaturasVo.add(linkTo(methodOn(CandidaturasController.class).findById(candidaturasVo.getCandidaturaKey())).withSelfRel());
 		return candidaturasVo;
+	}
+	
+	@Operation(summary = "Atualizando uma candidatura especifica")
+	@PutMapping(produces = { "application/json", "application/xml", "application/x-yaml" }, 
+			consumes = { "application/json", "application/xml", "application/x-yaml" })
+	public CandidaturasVo update(@RequestBody CandidaturasVo candidatura) {
+		CandidaturasVo candidaturasVo = service.update(candidatura);
+		candidaturasVo.add(linkTo(methodOn(CandidaturasController.class).findById(candidaturasVo.getCandidaturaKey())).withSelfRel());
+		return candidaturasVo;
+	}	
+	
+	@Operation(summary = "Apagar uma candidatura pelo seu Id")
+	@DeleteMapping("/{candidaturaKey}")
+	public ResponseEntity<?> delete(@PathVariable("candidaturaKey") Long candidaturaKey) {
+		service.delete(candidaturaKey);
+		return ResponseEntity.ok().build();
 	}
 	
 }
